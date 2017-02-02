@@ -98,7 +98,7 @@ def parse(String description) {
         def zigbeeMap = zigbee.parseDescriptionAsMap(description)
         def cluster = zigbee.parse(description)
 
-		if (zigbeeMap.raw == "51910303000801002000") {
+		if (zigbeeMap.raw == "F82B0303000800002000") {
         	log.debug "Physical switch turned on/off"
         }
         else if (zigbeeMap?.clusterInt == COLOR_CONTROL_CLUSTER) {
